@@ -35,7 +35,7 @@ class App extends Component {
     let content;
     // Do we have loaded the emoji yet?
     if (this.state.emojiList.length === 0)
-      content = <div className="message">Loading emoji...</div>
+      content = <div className="message">Loading emoji ⌛</div>
     // No emoji matches our query string?
     else if (this.state.activeEmoji.length === 0)
       content = <div className="message">No emoji found 😢</div>
@@ -85,9 +85,9 @@ class App extends Component {
     // If the user has typed something more than just a letter look for it else just show all the emoji
     if (text.length > 1) {
       results = this.state.emojiList.filter(emoji => (
-        emoji.keywords.includes(text) ||
-        emoji.name.includes(text) ||
-        emoji.char.includes(text)
+        emoji.keywords.includes(text.toLowerCase()) ||
+        emoji.name.includes(text.toLowerCase()) ||
+        emoji.char.includes(text.toLowerCase())
       ))
     } else
       results = this.state.emojiList
