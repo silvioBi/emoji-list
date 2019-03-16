@@ -20,4 +20,10 @@ To deploy it to your site just change the homepage in `package.json` to:
 "homepage": "http://[github-username].github.io/[github-repository-name]",
 ```
 
+And then run
+
+```
+yarn deploy
+```
+
 Follow the [gh-pages documentation](https://www.npmjs.com/package/gh-pages) for more info.
