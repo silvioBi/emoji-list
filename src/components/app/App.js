@@ -57,7 +57,14 @@ class App extends Component {
 
         {/* Out search bar */}
         <header className="search-field-wrapper">
-          <Input type="text" name="search-icon" id="searchIcon" placeholder="Look for an emoji" bsSize="lg" onChange={this.handleSearchInputChange} />
+          <Input
+            autoFocus={true}
+            type="text"
+            name="search-icon"
+            id="searchIcon"
+            placeholder="Look for an emoji"
+            bsSize="lg"
+            onChange={this.handleSearchInputChange} />
         </header>
 
         {/* Display the page content */}
@@ -67,7 +74,7 @@ class App extends Component {
         <Alert color="info" isOpen={this.state.visible} toggle={this.onDismiss}>
           Copied <b>{this.state.lastCopied}</b> to the clipboard!
         </Alert>
-        
+
       </div>
     )
   }
@@ -91,7 +98,7 @@ class App extends Component {
       ))
     } else
       results = this.state.emojiList
-    
+
     // Add the results to the state
     this.setState({
       ...this.state,
