@@ -3,38 +3,35 @@
 }
 
 .search-field-wrapper {
-  position: fixed !important;
   -webkit-backdrop-filter: blur(5x);
+  align-items: center;
   backdrop-filter: blur(5x);
   background-color: rgba(255, 255, 255, 0.6);
-  top: 0px;
+  padding: 0.7em 3em 1.5em;
+  position: fixed !important;
+  top: 0;
   width: 100%;
-  align-items: center;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: .7em;
-  padding-bottom: 1.5em;
   z-index: 1;
 }
 
 .deck {
-  margin-top: 5em;
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: center;
+  margin-top: 5em;
 }
 
 .card {
   display: flex;
-  margin: .5em;
+  margin: 0.5em;
+  padding: 0.5em;
   width: 8em;
-  padding: .5em;
 }
 
 .card-title {
-  font-size: 3em;
   cursor: pointer;
+  font-size: 3em;
 }
 
 .card-text {
@@ -42,21 +39,21 @@
 }
 
 .alert {
-  position: fixed !important;
   bottom: 5px;
   left: 4%;
+  position: fixed !important;
   width: 90%;
   z-index: 1;
 }
 
 .message {
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  bottom: 0px;
+  align-items: center;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: 6em;
+  justify-content: center;
+  min-height: 100vh;
+  position: absolute;
+  width: 100%;
 }
